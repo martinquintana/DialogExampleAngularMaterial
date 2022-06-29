@@ -1,0 +1,25 @@
+<p>greeting works!</p>
+
+<form [formGroup]="newBlock" (ngSubmit)="addBlock()">
+  
+    <div class="newBlock-form">
+      <section>
+        
+          <!-- title -->
+          
+            <input formControlName="title" type="text" matInput placeholder="title" required />
+          
+  
+          <!-- content -->
+          
+            <input formControlName="content" type="text" matInput placeholder="content" required />
+          
+  
+          <!-- botones -->
+          <button [disabled]="newBlock.invalid" type="submit" mat-raised-button color="primary">Agregar</button>
+          
+          <!-- <button routerLink="/courses/{{courseId}}" type="text" mat-raised-button color="primary">volver</button> -->
+        
+      </section>
+    </div>
+  </form>
